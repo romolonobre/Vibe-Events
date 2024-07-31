@@ -43,16 +43,23 @@ class LoginScreen extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     ),
                     const SizedBox(height: 40),
+
+                    // Email input
                     VIBETextformfield(
                       hintText: "Email",
                       onChanged: (v) {},
                     ),
                     const SizedBox(height: 10),
+
+                    // Password input
                     VIBETextformfield(
                       hintText: "Password",
                       onChanged: (v) {},
                     ),
                     const SizedBox(height: 10),
+
+                    //
+                    // Sign up button
                     Row(
                       children: [
                         VUIText.content(
@@ -71,24 +78,22 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 30),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        PlatformLoginButton(
-                          "assets/images/apple-logo.png",
-                          ontap: () {},
-                        ),
-                        const SizedBox(width: 20),
-                        PlatformLoginButton(
-                          "assets/images/gmail.png",
-                          ontap: () {},
-                        ),
-                      ],
+                    const SizedBox(height: 40),
+
+                    //
+                    // Goolgle Sign in button
+                    Align(
+                      alignment: Alignment.center,
+                      child: PlatformLoginButton(
+                        "assets/images/gmail.png",
+                        ontap: () {},
+                      ),
                     ),
                     const Spacer(),
+                    //
+                    // Sign in button
                     VUIButtons.solid(
-                      label: "Continue",
+                      label: "Sign in!",
                       onPressed: () => context.goNamed('/home'),
                     ).paddingOnly(bottom: 20)
                   ],

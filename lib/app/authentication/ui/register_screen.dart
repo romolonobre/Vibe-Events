@@ -37,25 +37,33 @@ class RegisterScreen extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     ),
                     const SizedBox(height: 30),
+
+                    // Full name input
                     VIBETextformfield(
                       hintText: "Full name",
                       onChanged: (v) {},
                     ),
                     const SizedBox(height: 10),
+
+                    // Email input
                     VIBETextformfield(
                       hintText: "Email",
                       onChanged: (v) {},
                     ),
                     const SizedBox(height: 10),
+
+                    // Password input
                     VIBETextformfield(
                       hintText: "Password",
                       onChanged: (v) {},
                     ),
                     const Spacer(),
+
+                    // Sign up button
                     VUIButtons.solid(
-                      label: "Continue",
+                      label: "Sign up!",
                       onPressed: () {},
-                    ).paddingOnly(bottom: 20)
+                    ).paddingOnly(bottom: 30)
                   ],
                 ).paddingOnly(left: 20, right: 20, top: 20),
               ),

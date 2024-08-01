@@ -1,16 +1,24 @@
-# vibe
+## -------------------------------- The app is still work in progress ----------------------------
 
-A new Flutter project.
+# Vibe
+Vibe is an event discovery app that helps you find events. Whether you're looking for concerts, theater, stand up or other local events.
 
-## Getting Started
+# Note on Free API Limitations
+The free Ticketmaster Discovery API has limited data availability and functionality compared to paid plans. As a result, you may encounter restrictions on the amount or specific details about events.
 
-This project is a starting point for a Flutter application.
+Features
+- Event Discovery: Find events using the Ticketmaster Discovery API.
+- Vibe allows users to purchase tickets directly through Ticketmaster without leaving the app. When you view an event and click on the "Buy Tickets" button, you will be redirected to Ticketmaster's event ticket selection page.
+- User Authentication (Coming Soon): Integration with Firebase for phone number and email link login.
 
-A few resources to get you started if this is your first Flutter project:
+Navigation
+- Go Router: Manages the app's routing and navigation
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+State Management
+- Cubit 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+<img width="967" alt="Screenshot 2024-08-01 at 18 30 46" src="https://github.com/user-attachments/assets/8cc50a3f-f222-48f2-9f77-3c3f900244fb">
+
+
+

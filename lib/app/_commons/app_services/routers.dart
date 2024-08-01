@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:vibe/app/authentication/ui/login_screen.dart';
 import 'package:vibe/app/authentication/ui/register_screen.dart';
+import 'package:vibe/app/home/interactor/entities/event.dart';
 import 'package:vibe/app/home/ui/event_details_screen.dart';
 import 'package:vibe/app/home/ui/home_screen.dart';
 import 'package:vibe/app/splash_screen.dart';
@@ -30,10 +31,11 @@ class Routers {
         builder: (context, state) => const HomeScreen(),
       ),
       GoRoute(
-        path: '/event-details',
-        name: '/event-details',
-        builder: (context, state) => const EventDetailsScreen(),
-      )
+          path: '/event-details',
+          name: '/event-details',
+          builder: (context, state) {
+            return EventDetailsScreen(event: state.extra as Event);
+          })
     ],
   );
 }

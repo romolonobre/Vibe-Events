@@ -8,6 +8,7 @@ import 'package:vibe/app/_commons/vibe_ui/palette/vui_palette.dart';
 import 'package:vibe/app/_commons/vibe_ui/typography/vui_text.dart';
 import 'package:vibe/app/home/interactor/state/event_state.dart';
 
+import '../../_commons/widgets/app_logo.dart';
 import '../interactor/events_cubit.dart';
 import 'widgets/categorie_button.dart';
 import 'widgets/info_row_widget.dart.dart';
@@ -36,14 +37,11 @@ class _HomeScreenState extends State<HomeScreen> {
         centerTitle: true,
         title: Column(
           children: [
-            VUIText.subTitle(
-              "Vibe",
-              color: VUIPalette.primaryColor,
-            ),
-            VUIText.content(
-              "Connect, Discover, Enjoy",
-              color: VUIPalette.black,
-              fontsize: 12,
+            AppLogo(
+              logoColor: VUIPalette.primaryColor,
+              logoSize: 18,
+              sloganColor: VUIPalette.primaryColor,
+              sloganSize: 10,
             ),
           ],
         ),
@@ -179,7 +177,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       ).paddingOnly(top: 2)
                                     ],
                                   ),
-                                  onTap: () => _launchURL(event.buyTicketUrl),
+                                  onTap: () => launchURL(event.buyTicketUrl),
                                 ),
                               ],
                             ).paddingOnly(left: 10, right: 10),
@@ -197,7 +195,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-void _launchURL(String url) async {
+void launchURL(String url) async {
   if (await canLaunchUrl(Uri.parse(url))) {
     await launchUrl(Uri.parse(url));
   } else {

@@ -4,6 +4,7 @@ import 'package:vibe/app/_commons/extensions.dart';
 import '../../_commons/vibe_ui/palette/vui_palette.dart';
 import '../../_commons/vibe_ui/typography/vui_text.dart';
 import '../../_commons/vibe_ui/vui_buttons.dart';
+import '../../_commons/widgets/app_logo.dart';
 import '../../_commons/widgets/vibe_textformfield.dart';
 
 class RegisterScreen extends StatelessWidget {
@@ -17,6 +18,8 @@ class RegisterScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          AppLogo(),
+          const SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.only(left: 15, right: 15),
             child: Material(

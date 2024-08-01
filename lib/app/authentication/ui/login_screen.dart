@@ -6,6 +6,7 @@ import 'package:vibe/app/_commons/widgets/vibe_textformfield.dart';
 
 import '../../_commons/vibe_ui/palette/vui_palette.dart';
 import '../../_commons/vibe_ui/vui_buttons.dart';
+import '../../_commons/widgets/app_logo.dart';
 import 'widgtes/platform_login_button.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -19,6 +20,8 @@ class LoginScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
+          AppLogo(),
+          const SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.only(left: 15, right: 15, bottom: 90),
             child: Material(

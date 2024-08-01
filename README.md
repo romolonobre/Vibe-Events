@@ -1,4 +1,4 @@
-## -------------------------------- The app is still work in progress ----------------------------
+## --------------- The app is still work in progress ------------------
 
 # Vibe
 Vibe is an event discovery app that helps you find events. Whether you're looking for concerts, theater, stand up or other local events.

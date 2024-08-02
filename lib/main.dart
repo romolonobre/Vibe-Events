@@ -1,10 +1,14 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:vibe/firebase_options.dart';
 
 import 'app/_commons/app_services/injector.dart';
 import 'app/_commons/app_services/routers.dart';
 
-void main() {
-  setupInjector();
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  await setupInjector();
 
   runApp(const MyApp());
 }

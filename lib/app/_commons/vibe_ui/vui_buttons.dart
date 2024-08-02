@@ -53,4 +53,33 @@ class VUIButtons {
       ),
     );
   }
+
+  static Widget text({
+    required String label,
+    required VoidCallback onPressed,
+    Color? textColor,
+    double? width,
+    Color? backgroundColor,
+    Color? borderColor,
+  }) {
+    return SizedBox(
+      width: width ?? 130,
+      child: TextButton(
+        style: TextButton.styleFrom(
+          backgroundColor: backgroundColor,
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 6),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+            side: BorderSide(color: borderColor ?? Colors.transparent),
+          ),
+        ),
+        onPressed: onPressed,
+        child: VUIText.content(
+          label,
+          color: textColor ?? VUIPalette.primaryColor,
+          fontWeight: FontWeight.w600,
+        ),
+      ),
+    );
+  }
 }

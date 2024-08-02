@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../vibe_ui/palette/vui_palette.dart';
+import 'package:vibe/app/_commons/extensions.dart';
 
 class VIBETextformfield extends StatelessWidget {
   final String hintText;
@@ -23,21 +22,16 @@ class VIBETextformfield extends StatelessWidget {
       textCapitalization: capitalizeFirstWord ? TextCapitalization.words : TextCapitalization.none,
       onChanged: onChanged,
       decoration: InputDecoration(
+        contentPadding: const EdgeInsets.all(18),
+        filled: true,
+        fillColor: const Color(0xfff1f2f4),
         hintText: hintText,
-        hintStyle: TextStyle(color: Colors.grey.shade400, fontSize: 14),
-        enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.grey.shade300),
-          borderRadius: BorderRadius.circular(12),
+        hintStyle: TextStyle(
+          color: Colors.grey.shade400,
+          fontSize: 14,
         ),
-        focusedBorder: OutlineInputBorder(
-          borderSide: const BorderSide(color: VUIPalette.primaryColor),
-          borderRadius: BorderRadius.circular(12),
-        ),
-        border: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.grey.shade400),
-          borderRadius: BorderRadius.circular(12),
-        ),
+        border: InputBorder.none,
       ),
-    );
+    ).borderRadius(15);
   }
 }

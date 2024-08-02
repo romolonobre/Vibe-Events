@@ -1,11 +1,10 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:vibe/app/_commons/extensions.dart';
+import 'package:vibe/app/_commons/vibe_ui/palette/vui_palette.dart';
 import 'package:vibe/app/_commons/vibe_ui/typography/vui_text.dart';
-import 'package:vibe/app/_commons/widgets/vibe_textformfield.dart';
+import 'package:vibe/app/authentication/ui/widgtes/login_with_phone_number_section.dart';
 
-import '../../_commons/vibe_ui/palette/vui_palette.dart';
-import '../../_commons/vibe_ui/vui_buttons.dart';
 import '../../_commons/widgets/app_logo.dart';
 import 'widgtes/platform_login_button.dart';
 
@@ -16,96 +15,83 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: VUIPalette.primaryColor,
+      backgroundColor: Colors.white,
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          AppLogo(),
-          const SizedBox(height: 20),
-          Padding(
-            padding: const EdgeInsets.only(left: 15, right: 15, bottom: 90),
-            child: Material(
-              elevation: 10,
-              borderRadius: BorderRadius.circular(20),
-              child: Container(
-                width: MediaQuery.sizeOf(context).width,
-                height: MediaQuery.sizeOf(context).height - 300,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.white,
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    VUIText.content(
-                      "Hello,",
-                      fontWeight: FontWeight.w600,
-                    ),
-                    VUIText.subTitle(
-                      "Sign in!",
-                      fontWeight: FontWeight.w600,
-                    ),
-                    const SizedBox(height: 40),
-
-                    // Email input
-                    VIBETextformfield(
-                      hintText: "Email",
-                      onChanged: (v) {},
-                    ),
-                    const SizedBox(height: 10),
-
-                    // Password input
-                    VIBETextformfield(
-                      hintText: "Password",
-                      onChanged: (v) {},
-                    ),
-                    const SizedBox(height: 10),
-
-                    //
-                    // Sign up button
-                    Row(
-                      children: [
-                        VUIText.content(
-                          "Don't have an account?",
-                          fontsize: 14,
-                          fontWeight: FontWeight.w600,
-                        ).paddingOnly(left: 5),
-                        GestureDetector(
-                          child: VUIText.content(
-                            "Sign up",
-                            fontsize: 14,
-                            color: VUIPalette.primaryColor,
-                            fontWeight: FontWeight.w600,
-                          ).paddingOnly(left: 5),
-                          onTap: () => context.pushNamed("/register"),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 40),
-
-                    //
-                    // Goolgle Sign in button
-                    Align(
-                      alignment: Alignment.center,
-                      child: PlatformLoginButton(
-                        "assets/images/gmail.png",
-                        ontap: () {},
-                      ),
-                    ),
-                    const Spacer(),
-                    //
-                    // Sign in button
-                    VUIButtons.solid(
-                      label: "Sign in!",
-                      onPressed: () => context.goNamed('/home'),
-                    ).paddingOnly(bottom: 20)
-                  ],
-                ).paddingOnly(left: 20, right: 20, top: 20),
-              ),
+          const SizedBox(height: 80),
+          Center(
+            // APP Logo
+            child: AppLogo(
+              logoColor: VUIPalette.primaryColor,
+              sloganColor: VUIPalette.primaryColor,
+              logoSize: 23,
+              sloganSize: 10,
             ),
           ),
+          const SizedBox(height: 40),
+
+          // Welcome text
+          VUIText.subTitle(
+            "Hi! Welcome to Vibe",
+            color: VUIPalette.black,
+            fontWeight: FontWeight.w600,
+            fontsize: 17,
+          ),
+          const SizedBox(height: 5),
+          VUIText.content(
+            "Please select a sign-in method: Phone Number or Google.",
+            color: VUIPalette.black,
+            fontWeight: FontWeight.w300,
+            fontsize: 14,
+          ),
+          const SizedBox(height: 60),
+
+          // Phone Number section
+          const LoginWithPhoneNumberSection(),
+
+          const SizedBox(height: 80),
+
+          // Divider
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              SizedBox(
+                width: 150,
+                child: Divider(
+                  color: VUIPalette.black.withOpacity(0.1),
+                  height: 1,
+                ),
+              ),
+              VUIText.content(
+                "Or",
+                color: VUIPalette.black,
+                fontsize: 13,
+              ),
+              SizedBox(
+                width: 150,
+                child: Divider(
+                  color: VUIPalette.black.withOpacity(0.1),
+                  height: 1,
+                ),
+              ),
+            ],
+          ),
+
+          const SizedBox(height: 50),
+
+          // Goolgle Sign in button
+          Align(
+            alignment: Alignment.center,
+            child: PlatformLoginButton(
+              "assets/images/google.png",
+              ontap: () {},
+            ),
+          ),
+          const Spacer(),
         ],
-      ),
+      ).paddingOnly(left: 20, right: 20),
     );
   }
 }

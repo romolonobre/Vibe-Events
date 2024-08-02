@@ -74,6 +74,8 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> with SingleTick
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
+                      //
+                      // Event - Venue details
                       VUIText.subTitle(widget.event.name),
                       const SizedBox(height: 10),
                       InfoRowWidget(
@@ -100,6 +102,9 @@ class _EventDetailsScreenState extends State<EventDetailsScreen> with SingleTick
                   ).paddingOnly(left: 10, right: 10, top: 10),
                 ),
                 const SizedBox(height: 20),
+
+                //
+                // Buy Ticket Button
                 VUIButtons.solid(
                   height: 60,
                   label: widget.event.ticketPrice!.isNotEmpty

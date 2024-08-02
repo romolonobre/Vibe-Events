@@ -6,9 +6,9 @@ import '../palette/vui_palette.dart';
 class VUIText {
   static Widget content(
     String label, {
-    double fontsize = 16,
+    double fontsize = 14,
     Color color = VUIPalette.black,
-    FontWeight fontWeight = FontWeight.w500,
+    FontWeight fontWeight = FontWeight.w300,
     TextAlign textAlign = TextAlign.left,
     int? maxLines,
     TextOverflow? overflow,

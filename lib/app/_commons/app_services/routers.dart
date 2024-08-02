@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:vibe/app/authentication/ui/login_screen.dart';
-import 'package:vibe/app/authentication/ui/register_screen.dart';
+import 'package:vibe/app/authentication/ui/verify_otp_screen.dart';
 import 'package:vibe/app/home/interactor/entities/event.dart';
 import 'package:vibe/app/home/ui/event_details_screen.dart';
 import 'package:vibe/app/home/ui/home_screen.dart';
@@ -23,7 +23,7 @@ class Routers {
       GoRoute(
         path: '/register',
         name: '/register',
-        builder: (context, state) => RegisterScreen(
+        builder: (context, state) => VerifyOTPScreen(
           authDto: state.extra as AuthDto,
         ),
       ),

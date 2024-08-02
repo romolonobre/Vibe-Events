@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>472947874974-83gl6obq7ml4ncf3u95b23p5bl9daulm.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.472947874974-83gl6obq7ml4ncf3u95b23p5bl9daulm</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>472947874974-qnic8lvr3gn58e2ft5k6btjmlue86tql.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyABkRLetM8t8OmLs9OpJxtuN4DWok0Wb4Y</string>
+	<key>GCM_SENDER_ID</key>
+	<string>472947874974</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>vibeapp.com.vibe</string>
+	<key>PROJECT_ID</key>
+	<string>vibe-c564d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>vibe-c564d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:472947874974:ios:10c90aa54330811bdeaf8f</string>
+</dict>
+</plist>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "472947874974",
+    "project_id": "vibe-c564d",
+    "storage_bucket": "vibe-c564d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472947874974:android:e39afe8689773135deaf8f",
+        "android_client_info": {
+          "package_name": "vibeapp.com.vibe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvYSYfgHPmX_a4lQvXqdNY27QwvMEFHS4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

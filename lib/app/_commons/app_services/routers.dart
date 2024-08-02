@@ -23,7 +23,9 @@ class Routers {
       GoRoute(
         path: '/register',
         name: '/register',
-        builder: (context, state) => const RegisterScreen(),
+        builder: (context, state) => RegisterScreen(
+          authDto: state.extra as AuthDto,
+        ),
       ),
       GoRoute(
         path: '/home',

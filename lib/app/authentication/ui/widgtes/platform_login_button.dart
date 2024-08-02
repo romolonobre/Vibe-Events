@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vibe/app/_commons/extensions.dart';
+import 'package:vibe/app/_commons/vibe_ui/typography/vui_text.dart';
 
 class PlatformLoginButton extends StatelessWidget {
   final String icon;
@@ -11,8 +12,8 @@ class PlatformLoginButton extends StatelessWidget {
     return GestureDetector(
       onTap: () => ontap(),
       child: Container(
-        height: 70,
-        width: 100,
+        height: 60,
+        width: double.infinity,
         decoration: BoxDecoration(
           border: Border.all(
             width: 0.6,
@@ -20,9 +21,18 @@ class PlatformLoginButton extends StatelessWidget {
           ),
           borderRadius: BorderRadius.circular(15),
         ),
-        child: Image.asset(
-          icon,
-        ).paddingAll(20),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              icon,
+            ).paddingAll(20),
+            VUIText.content(
+              "Sign in with Google",
+              fontsize: 12,
+            )
+          ],
+        ),
       ),
     );
   }

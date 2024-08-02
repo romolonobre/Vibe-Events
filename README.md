@@ -9,7 +9,7 @@ The free Ticketmaster Discovery API has limited data availability and functional
 Features
 - Event Discovery: Find events using the Ticketmaster Discovery API.
 - Vibe allows users to purchase tickets directly through Ticketmaster without leaving the app. When you view an event and click on the "Buy Tickets" button, you will be redirected to Ticketmaster's event ticket selection page.
-- User Authentication (Coming Soon): Integration with Firebase for phone number and email link login.
+- User Authentication: Integration with Firebase for phone number and google login
 
 Navigation
 - Go Router: Manages the app's routing and navigation
@@ -17,8 +17,6 @@ Navigation
 State Management
 - Cubit 
 
+## Screens
 
-<img width="967" alt="Screenshot 2024-08-01 at 18 30 46" src="https://github.com/user-attachments/assets/8cc50a3f-f222-48f2-9f77-3c3f900244fb">
-
-
-
+<img width="1346" alt="Screenshot 2024-08-02 at 21 40 42" src="https://github.com/user-attachments/assets/9248e4eb-8ebc-4c61-a880-fdebc0a498b6">

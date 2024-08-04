@@ -1,6 +1,5 @@
-import 'package:vibe/app/authentication/data/auth_service.dart';
-import 'package:vibe/app/authentication/data/firebase_auth_service.dart';
-
+import '../data/auth_service.dart';
+import '../data/firebase_auth_service.dart';
 import 'state/auth_state.dart';
 
 class AuthController {

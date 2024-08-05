@@ -21,8 +21,8 @@ class Routers {
         builder: (context, state) => const LoginScreen(),
       ),
       GoRoute(
-        path: '/register',
-        name: '/register',
+        path: '/otp',
+        name: '/otp',
         builder: (context, state) => VerifyOTPScreen(
           authDto: state.extra as AuthDto,
         ),

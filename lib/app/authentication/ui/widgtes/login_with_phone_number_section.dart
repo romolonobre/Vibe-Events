@@ -109,7 +109,7 @@ class _LoginWithPhoneNumberSectionState extends State<LoginWithPhoneNumberSectio
                   if (state is SendOTPSuccessState) {
                     log(state.otp);
                     context.push(
-                      '/register',
+                      '/otp',
                       extra: AuthDto(
                         otp: state.otp,
                         phoneNumber: "${selectedCountry.code}$phoneNumber",

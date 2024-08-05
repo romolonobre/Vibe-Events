@@ -1,11 +1,11 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:vibe/app/_commons/extensions.dart';
-import 'package:vibe/app/_commons/vibe_ui/palette/vui_palette.dart';
-import 'package:vibe/app/_commons/vibe_ui/typography/vui_text.dart';
-import 'package:vibe/app/authentication/ui/widgtes/login_with_phone_number_section.dart';
 
+import '../../_commons/vibe_ui/palette/vui_palette.dart';
+import '../../_commons/vibe_ui/typography/vui_text.dart';
 import '../../_commons/widgets/app_logo.dart';
+import 'widgtes/login_with_phone_number_section.dart';
 import 'widgtes/platform_login_button.dart';
 
 class LoginScreen extends StatelessWidget {

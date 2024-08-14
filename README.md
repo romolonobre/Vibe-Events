@@ -4,7 +4,7 @@
 Vibe is an event discovery app that helps you find events. Whether you're looking for concerts, theater, stand up or other local events.
 
 # Note on Free API Limitations
-The free Ticketmaster Discovery API has limited data availability and functionality compared to paid plans. As a result, you may encounter restrictions on the amount or specific details about events.
+The free Ticketmaster Discovery API has limited data availability and functionality compared to paid plans. As a result, thre are restrictions on the amount or specific details about events.
 
 Features
 - Event Discovery: Find events using the Ticketmaster Discovery API.
